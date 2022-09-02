@@ -1,6 +1,12 @@
 @extends('frontend.main.main')
 @section('content')
 <style>
+    .container-fluid{
+        /* width: 100%; */
+        margin: 0;
+        padding: auto;
+
+    }
     .contact_form{
         background: #3c5b7abf;
         border-radius: 30px;
@@ -27,6 +33,81 @@
         display: none;
        } 
     }
+    .news-app-promo {
+  box-sizing: border-box;
+  background: radial-gradient(circle, rgba(56,49,128,0.7959558823529411) 0%, rgba(19,49,124,1) 100%);
+  padding: 0.5em;
+  margin-top: 1em;
+}
+
+.news-app-promo__section {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.news-app-promo-text {
+  color: #fff;
+  font-family: helvetica;
+  min-width: 277px;
+  border-right: 0.25em solid #fff;
+  border-left: 0.25em solid #fff;
+  padding: 0 1em;
+  width: 35%;
+  margin: 1em auto;
+  display: block;
+}
+
+.news-app-promo-text__tagline {
+  font-size: 1.09em;
+}
+
+.news-app-promo-text__download {
+  font-size: 2.25em;
+  font-weight: 600;
+}
+
+.news-app-promo-buttons {
+  margin: 0 auto;
+  max-width: 35%;
+  display: block;
+}
+
+.news-app-promo-buttons__buttons {
+  display: block;
+}
+
+.news-app-promo-buttons__logo {
+  display: inline-block;
+}
+
+.news-app-promo-subsection {
+  display: inline-block;
+  margin: 0 auto;
+  margin-right: 10px;
+}
+
+.news-app-promo__bbc-logo {
+  display: inline-block;
+  width: 106px;
+  margin-bottom: 8px;
+}
+
+.news-app-promo__play-store,
+.news-app-promo__app-store {
+  display: block;
+  width: 161px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.news-app-promo-subsection--link {
+  text-decoration: none;
+  border: 0;
+}
 </style>
     <main>
         <!--? slider Area Start-->
@@ -84,6 +165,34 @@
             </div>
         </section>
         <!-- slider Area End-->
+<!-- playstore Area start-->
+<section>
+    <div class="container-fluid">
+        <div id="newsspec-19854-app" class="news-app-promo row">
+            <div class="news-app-promo-text col-md-6">
+                <div class="news-app-promo-text__tagline">The best way to get news on the go</div><br>
+                <div class="news-app-promo-text__download">Download BloomWash™ Mobile App, Get 30% OFF on garment cleaning*..</div>
+            </div>
+            <div class="news-app-promo__section col-md-6">
+                <div class="news-app-promo-subsection">
+                    <img class="news-app-promo__bbc-logo rounded thumbnail" src="{{asset('setting_img/'.$setting->logo)}}" style="height:150px;width:200px;" class="">
+                </div>
+                <div class="news-app-promo-subsection">
+                    <a class="news-app-promo-subsection--link news-app-promo-subsection--playstore" href="https://play.google.com/store/apps/details?id=bbc.mobile.news.ww&amp;hl=en" target="_parent">
+                        <img class="news-app-promo__play-store" src="//news.files.bbci.co.uk/include/newsspec/19854/assets/app-project-assets/google_play_store.svg" width="161" height="auto" border="0">
+                    </a>
+                    <a class="news-app-promo-subsection--link news-app-promo-subsection--appstore" href="https://itunes.apple.com/us/app/bbc-news/id364147881?mt=8" target="_parent">
+                        <img class="news-app-promo__app-store" src="//news.files.bbci.co.uk/include/newsspec/19854/assets/app-project-assets/ios_app_store.svg" width="161" height="auto" border="0">
+                    </a>
+                </div>
+            </div>
+            <div class="news-app-promo__section">
+        
+            </div>
+        </div>
+    </div>
+</section>
+<!-- playstore Area end-->
 
         <!--? About Area  -->
         <section class="about-area2 pb-bottom mt-30">

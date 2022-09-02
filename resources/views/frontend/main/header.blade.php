@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/assets/img/favicon.png')}}">
     <!-- CSS here -->
-     <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/slicknav.css')}}">
+     {{-- <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}"> --}}
+    {{-- <link rel="stylesheet" href="{{asset('frontend/assets/css/slicknav.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/progressbar_barfiller.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/gijgo.css')}}">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/themify-icons.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/nice-select.css')}}"> --}}
 
     <link rel="stylesheet" href="{{asset('frontend/assets/css/slicknav.css')}}">
 
@@ -46,6 +46,10 @@
     }
     input{
         border-radius:30px;
+    }
+    .container-fluid{
+        margin: 0!important;
+        Padding: 0!important;
     }
 </style>
 
