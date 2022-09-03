@@ -22,25 +22,27 @@
                     <div class="single-footer-caption mb-50">
                         <div class="single-footer-caption mb-30">
                             <!-- logo -->
-                            <div class="footer-logo ">
-                                <div class="logo ">
+                            <div class="footer-logo">
+                                <div class="logo text-center">
                                     <a href="{{route('home')}}" style="color:black; font-weight: bold;">
                                         <img src="{{asset('setting_img/'.$setting->logo) }}" height="95px" alt="">
                                         {{-- <h1>BLOOM WASH</h1> --}}
                                     </a>
                                 </div>
                             </div>
-                            {{-- <div class="news-app-promo-subsection">
-                                <a class="bg-dark text-dark news-app-promo-subsection--link  news-app-promo-subsection--playstore" href="https://play.google.com/store/apps/details?id=bbc.mobile.news.ww&amp;hl=en" target="_parent">
-                                    <img class="news-app-promo__play-store" src="//news.files.bbci.co.uk/include/newsspec/19854/assets/app-project-assets/google_play_store.svg" width="161" height="auto" border="0">
-                                </a>
-                                <a class="news-app-promo-subsection--link bg-dark news-app-promo-subsection--appstore" href="https://itunes.apple.com/us/app/bbc-news/id364147881?mt=8" target="_parent">
-                                    <img class="news-app-promo__app-store" src="//news.files.bbci.co.uk/include/newsspec/19854/assets/app-project-assets/ios_app_store.svg" width="161" height="auto" border="0">
-                                </a>
-                            </div> --}}
+                            
+                            
                             <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p class="text-center">{{$setting->f_about}}</p>
+                                <div class="footer-pera text-center">
+                                    <div class="news-app-promo-subsection">
+                                        <a class="news-app-promo-subsection--link news-app-promo-subsection--playstore" style="padding: 0;" href="#" target="_parent">
+                                            <img class="news-app-promo__play-store bg-dark" style="border-radius: 15px;margin-bottom:3px" src="//news.files.bbci.co.uk/include/newsspec/19854/assets/app-project-assets/google_play_store.svg"  width="161" height="auto" border="0">
+                                        </a> <br>
+                                        <a class="news-app-promo-subsection--link news-app-promo-subsection--appstore" href="https://itunes.apple.com/us/app/bbc-news/id364147881?mt=8" target="_parent">
+                                            <img class="news-app-promo__app-store bg-dark" style="border-radius: 15px" src="//news.files.bbci.co.uk/include/newsspec/19854/assets/app-project-assets/ios_app_store.svg" width="161" height="auto" border="0">
+                                        </a>
+                                    </div>
+                                    {{-- <p class="text-center">{{$setting->f_about}}</p> --}}
                                 </div>
                             </div>
                             
@@ -82,7 +84,7 @@
                             <div class="row">
                                 <div class="col-md-12 d-flex">
                                     <input type="text" class="form-control" name="" placeholder="Enter Your Email Here !!" style="height:50px;border-radius:30px 0px 0px 30px">
-                                    <button type="submit" class="" style="height:50px;background:#293464;border-radius:0 10px 10px 0px">Go</button>
+                                    <button type="submit" class="btn wantToWork-btn" style="height:50px;background:#293464;border-radius:0 10px 10px 0px">Go</button>
                                 </div>
                             </div>
                            </form>
@@ -231,3 +233,25 @@
 </body>
 
 </html>
+<script>
+    let counter = document.querySelectorAll(".counter");
+let arr = Array.from(counter);
+arr.map((item)=>{
+    let count = item.innerHTML;
+    item.innerHTML = "";
+    let countNumber= 0;
+
+
+    function counterUp(){
+        item.innerHTML= countNumber++;
+        if ( countNumber > count ) {
+            clearInterval(stop);
+        }
+    }
+
+    let stop = setInterval(() => {
+        counterUp();
+    },item.dataset.speed/count );
+
+});
+</script>

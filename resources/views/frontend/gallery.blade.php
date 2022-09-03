@@ -1,5 +1,14 @@
 @extends('frontend.main.main')
 @section('content')
+<style>
+     #gallery{
+        width: 100%;
+    background: ;
+    border-bottom:3px solid #293464;
+    margin: 0 auto;
+    padding-bottom: 33px;
+}
+</style>
     <main>
         <!--? Hero Start -->
         <div class="slider-area2 section-bg2 hero-overly" style="height: 300px"
@@ -36,7 +45,7 @@
         <!-- About Area End -->
 
             <!--? Services Area Start -->
-            <section class="services-area pt-top pb-20 mb-60">
+            {{-- <section class="services-area pt-top pb-20 mb-60">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-7 col-lg-8">
@@ -86,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
             <!-- Services End -->
 
         <!--? Want To work -->
@@ -103,8 +112,8 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-5">
-                            <a href="#" class="btn wantToWork-btn"><img src="{{asset('frontend/assets/img/icon/call2.png')}}" alt="" /> Learn
-                                More</a>
+                            <a href="callTo:{{$setting->contact_no}}" class="btn wantToWork-btn"><img src="{{asset('frontend/assets/img/icon/call2.png')}}" alt="" /> Call
+                                Us</a>
                         </div>
                     </div>
                 </div>

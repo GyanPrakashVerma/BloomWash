@@ -1,5 +1,15 @@
 @extends('frontend.main.main')
 @section('content')
+<style>
+     #about{
+    width: 100%;
+    background: ;
+    border-bottom:3px solid #293464;
+    margin: 0 auto;
+    padding-bottom: 33px;
+   
+}
+</style>
     <main>
         <!--? Hero Start -->
         <div class="slider-area2 section-bg2 hero-overly" style="height: 300px"
@@ -51,60 +61,77 @@
         </section>
         <!-- About Area End -->
 
-            <!--? Services Area Start -->
-            <section class="services-area pt-top pb-20 mb-60">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7 col-lg-8">
-                            <div class="section-tittle text-center mb-55">
-                                <span class="element">Our Process</span>
-                                <h2>This is how we work</h2>
+          <!--how we work -->
+        <section class="services-area pt-top pb-20 mb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <span class="element">Our Process</span>
+                            <h2>This is how we work</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <div class="cat-cap">
+                                <p class="m-0">Step 1</p>
+                                <h5><a href="#">Bag up all your dirty clothes</a></h5>
+                                <p>The automated process starts as soon as your clothes go into the machine. The outcome is
+                                    gleaming clothes!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-cat text-center">
-                                <div class="cat-icon">
-                                    <!-- <img src="{{asset('frontend/assets/img/icon/services-icon1.svg')}}" alt=""> -->
-                                    <i class="bi bi-cart "></i>
-                                </div>
-                                <div class="cat-cap">
-                                    <h5><a href="services.html">We collect your clothes</a></h5>
-                                    <p>The automated process starts as soon as your clothes go into the machine. The outcome
-                                        is gleaming clothes!</p>
-                                </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <!-- <img src="{{ asset('frontend/assets/img/icon/services-icon1.svg') }}" alt=""> -->
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+                            <div class="cat-cap">
+                                <p class="m-0">Step 2</p>
+                                <h5><a href="#">We collect your clothes</a></h5>
+                                <p>The automated process starts as soon as your clothes go into the machine. The outcome is
+                                    gleaming clothes!</p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-cat text-center">
-                                <div class="cat-icon">
-                                    <i class="bi bi-cart "></i>
-    
-                                </div>
-                                <div class="cat-cap">
-                                    <h5><a href="services.html">Wash your clothes</a></h5>
-                                    <p>The automated process starts as soon as your clothes go into the machine. The outcome
-                                        is gleaming clothes!</p>
-                                </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <i class="fa-solid fa-hands-bubbles"></i>
+
+                            </div>
+                            <div class="cat-cap">
+                                <p class="m-0">Step 3</p>
+                                <h5><a href="#">Wash your clothes</a></h5>
+                                <p>The automated process starts as soon as your clothes go into the machine. The outcome is
+                                    gleaming clothes!</p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-cat text-center">
-                                <div class="cat-icon">
-                                    <i class="bi bi-cart "></i>
-    
-                                </div>
-                                <div class="cat-cap">
-                                    <h5><a href="services.html">Get delivery</a></h5>
-                                    <p>The automated process starts as soon as your clothes go into the machine. The outcome
-                                        is gleaming clothes!</p>
-                                </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <i class="fa-solid fa-truck-fast"></i>
+
+
+                            </div>
+                            <div class="cat-cap">
+                                <p class="m-0">Step 4</p>
+                                <h5><a href="#">Get delivery</a></h5>
+                                <p>The automated process starts as soon as your clothes go into the machine. The outcome is
+                                    gleaming clothes!</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
             <!-- Services End -->
 
         <!--? Want To work -->
@@ -121,8 +148,8 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-5">
-                            <a href="#" class="btn wantToWork-btn"><img src="{{asset('frontend/assets/img/icon/call2.png')}}" alt="" /> Learn
-                                More</a>
+                            <a href="callTo:{{$setting->contact_no}}" class="btn wantToWork-btn"><img src="{{asset('frontend/assets/img/icon/call2.png')}}" alt="" /> Call
+                                Us</a>
                         </div>
                     </div>
                 </div>
@@ -171,18 +198,35 @@
 
                         </div>
                         <!-- Carousel controls -->
-                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        {{-- <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
                             <i class="bi bi-arrow-left-circle"></i>
                         </a>
                         <a class="carousel-control-next" href="#myCarousel" data-slide="next">
                             <i class="bi bi-arrow-right-circle"></i>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
 
         </section>
-
+        <section class="mt-3 pb-5 boxx">
+            <div class="container">
+                <div class="box">
+                    <div class="item">
+                        <p class="counter" data-speed="1000">3</p><br>
+                        {{-- <p class="text-center">Places Serve</p> --}}
+                    </div>
+                    <div class="item">
+                        <p class="counter" data-speed="1000">150</p>
+                        {{-- <p class="text-center">Happy Customers</p> --}}
+                    </div>
+                    <div class="item">
+                        <p class="counter" data-speed="1000">2500</p>
+                        {{-- <p class="text-center">Total Product</p> --}}
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!--?  Map Area start  -->
         <div class="Map-area" >

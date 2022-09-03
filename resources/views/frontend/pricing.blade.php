@@ -1,5 +1,14 @@
 @extends('frontend.main.main')
 @section('content')
+<style>
+   #pricing{
+    width: 100%;
+    background: ;
+    border-bottom:3px solid #293464;
+    margin: 0 auto;
+    padding-bottom: 33px;
+}
+</style>
   <main>
     <!--? Hero Start -->
     <div class="slider-area2 section-bg2 hero-overly" style="height: 300px"
