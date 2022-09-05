@@ -38,11 +38,13 @@
     <!-- AOS Animation css  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <style>
     .home {
         color: #212529;
-        border-bottom: 3px solid #212529;
+        /* border-bottom: 3px solid #212529; */
     }
     input{
         border-radius:30px;
@@ -98,6 +100,12 @@
             color:#293464;
             font-family: 'Josefin Sans', sans-serif;
         }
+        
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+    #contact{
+        display: none!important;
+    }
+}
 </style>
 
 <body style="padding: 0!important;">
@@ -132,6 +140,8 @@
                                     <li class="service"><a id="service" href="{{route('service')}}">Services</a></li>
                                     <li class="pricing"><a id="pricing" href="{{route('pricing')}}">Pricing</a></li>
                                     <li class="pricing"><a id="gallery" href="{{route('gallery')}}">Gallery</a></li>
+
+                                    <li class="contact_menu"><a id="contact" href="{{route('contact')}}">Contact</a></li>
 
                                     <!-- <li><a href="contact.html">Contact</a></li> -->
                                 </ul>

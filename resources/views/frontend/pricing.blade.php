@@ -12,13 +12,13 @@
   <main>
     <!--? Hero Start -->
     <div class="slider-area2 section-bg2 hero-overly" style="height: 300px"
-      data-background="https://www.rentinc.co.uk/blog/wp-content/uploads/template98.jpg">
+      data-background="{{asset('frontend/assets/img/hero/hero2.png')}}">
       <div class="slider-height2 d-flex align-items-center">
         <div class="container">
           <div class="row">
             <div class="col-xl-12">
               <div class="hero-cap hero-cap2" style="margin-bottom: 90px">
-                <h2 class="text-center">Pricing</h2>
+                <h2>Pricing</h2>
               </div>
             </div>
           </div>

@@ -45,6 +45,12 @@ class FrontendController extends Controller
         return view('frontend.gallery',compact('setting','gallery'));
     }
   
+    public function contact(){
+        $setting = Setting::where('delete_status', 0)->first();
+       
+        return view('frontend.contact',compact('setting'));
+    }
+  
 
 
    

@@ -7,14 +7,6 @@
             padding: auto;
 
         }
-
-        .contact_form {
-            background: #3c5b7abf;
-            border-radius: 30px;
-            top: -70px;
-            padding: 1rem;
-        }
-
         #home {
             width: 100%;
             background: ;
@@ -22,27 +14,32 @@
             margin: 0 auto;
             padding-bottom: 33px;
         }
+        .contact_form {
+            background: #3c5b7abf;
+            border-radius: 30px;
+            /* top: -70px; */
+            margin: auto;
+            padding: 1rem;
+        }
 
-
-        .form-contact {}
-
+       
         .contact_form .form-contact input {
-            border-radius: 30px;
+            /* border-radius: 30px; */
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #f9f9fa;
+        }
+        .contactForm{
+            background: #293464;
+            color: #fff;
         }
 
-        .contact_form .form-contact textarea {
-            border-radius: 30px;
-        }
+       
 
         .contact_form .form-contact button {
             border-radius: 30px;
         }
 
-        @media(max-width:768px) {
-            .contact_form {
-                display: none;
-            }
-        }
 
         .news-app-promo {
             box-sizing: border-box;
@@ -135,6 +132,11 @@
         }
     </style>
     <main>
+        @if(Session::has('success'))
+        <script>
+          swal("Congrates!!!!","{{Session::get('success')}}","success",{button:"OK"});
+      </script>
+        @endif
         <!--? slider Area Start-->
         <section class="slider-area hero-overly" style="max-height:90vh;">
             <div class="slider-active">
@@ -142,46 +144,59 @@
                 <div class="single-slider slider-height d-flex align-items-end ">
                     <div class="container-fluid px-5 banner_container" style="position: absolute; ">
                         <div class="row justify-content-center align-items-center px-3">
-                            <div class="col-xl-7 col-lg-7 col-md-7 banner_tagline">
-                                <h1 data-aos="fade-right" data-aos-duration="500" style="float:left;">We take care about
-                                    cleenness of your cloth</h1>
-                                <!-- <p data-animation="fadeInLeft" data-delay="0.4s"></p> -->
-                                <!-- <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s"> Services</a> -->
+                            <div class="col-xl-7 col-lg-7 col-md-7 banner_tagline m-auto" data-aos="fade-right" data-aos-duration="500">
+                                <h1  style="float:left;">We take care about
+                                    cleanness of your clothes...</h1>
+                                 <p data-animation="fadeInLeft" data-delay="0.4s">
+                                <a href="{{route('service')}}" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s"> Services</a>
+                                 </p>
                             </div>
-                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-9 contact_form">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 m-auto contact_form" data-aos="fade-left" data-aos-duration="500">
                                 <p class="text-center text-light mb-3">Contact Us</h3>
                                     <!-- <div class="col-lg-8"> -->
-                                <form class="form-contact" action="contact_process.php" method="post" id=""
+                                <form  class="form-contact" action="{{route('contact_store')}}" method="post" id=""
                                     novalidate="novalidate">
+                                    @csrf
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-12">
                                             <div class="form-group">
                                                 <input class="form-control valid" name="name" id="name"
                                                     type="text" placeholder="Enter your name">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-12">
                                             <div class="form-group">
                                                 <input class="form-control valid" name="email" id="email"
-                                                    type="email" placeholder="Email">
+                                                    type="email" placeholder="Enter your email">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input class="form-control valid" name="phone" id="phone"
+                                                    type="text" placeholder="Phone">
                                             </div>
                                         </div>
 
+                                        {{-- <div class="col-12">
+                                            <div class="form-group">
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                  </select>
+                                            </div>
+                                        </div> --}}
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input class="form-control" name="subject" id="subject" type="text"
-                                                    placeholder="Enter Subject">
+                                                <input type="text" class="form-control" name="address" id="message" placeholder="Address">
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <div class="form-group">
-                                                <textarea class="form-control w-100" name="message" id="message" cols="30" rows="5"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-9 ">
                                             <div class="form-group mt-3">
                                                 <button type="submit"
-                                                    class="button button-contactForm boxed-btn">Send</button>
+                                                    class="btn w-100 contactForm  text-light">Send</button>
                                             </div>
                                         </div>
                                     </div>

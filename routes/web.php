@@ -38,6 +38,8 @@ Route::get('/about',[FrontendController::class,'about'])->name('about');
 Route::get('/service',[FrontendController::class,'service'])->name('service');
 Route::get('/pricing',[FrontendController::class,'pricing'])->name('pricing');
 Route::get('/gallery',[FrontendController::class,'gallery'])->name('gallery');
+Route::get('/contact-Us',[FrontendController::class,'contact'])->name('contact');
+Route::post('/contact',[ContactController::class,'store'])->name('contact_store');
 // Route::get('/',[FrontendController::class,'comming']);
 
 // Backend routes
@@ -55,4 +57,5 @@ Route::group(['middleware' => ['adminpage'], 'prefix' =>'/admin'],function(){
     Route::resource('subscribe',SubscribeController::class);
     Route::resource('service',ServiceController::class);
     Route::resource('setting',SettingController::class);
+
 });

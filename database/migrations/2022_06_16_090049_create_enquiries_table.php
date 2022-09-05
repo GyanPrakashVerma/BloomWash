@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('Name')->nullable();
             $table->string('email')->nullable();
             $table->string('contact')->nullable();
-            $table->string('subject')->nullable();
-            $table->string('message')->nullable();
+            $table->string('address')->nullable();
             $table->tinyInteger('status')->default('1');
             $table->tinyInteger('delete_status')->default('0');
             $table->timestamps();

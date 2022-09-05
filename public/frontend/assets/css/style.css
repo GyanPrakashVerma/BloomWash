@@ -3027,7 +3027,8 @@ hr {
     background-image: url(https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fHdhc2hpbmd8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .slider-area .hero__caption {
@@ -3055,6 +3056,9 @@ hr {
         font-size: 70px;
         line-height: 1.2
     }
+    .contact_menu {
+        display: none!important;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3079,13 +3083,31 @@ hr {
 }
 
 @media (max-width: 575px) {
-    .slider-area h1 {
+    /* .slider-area h1 {
         font-size: 29px !important;
-        line-height: 1.4;
+       
         margin-bottom: 14px
-    }
+    } */
     .banner_tagline {
-        display: none !important;
+        display: block;
+        font-size: 35px;
+        margin: auto;
+        line-height: 1.4;
+        text-align: center;
+    }
+    .banner_tagline h1 {
+        display: block;
+        font-size: 35px;
+        margin: auto;
+        line-height: 1.4;
+        padding-top: 100px;
+        text-align: center;
+    }
+    .contact_form {
+        display: none;
+    }
+    .contact_menu {
+        display: block;
     }
 }
 
@@ -6795,7 +6817,7 @@ del {
 @media screen and (max-width:988px) {}
 
 .banner_container {
-    top: 136px;
+    top: 50px;
 }
 
 

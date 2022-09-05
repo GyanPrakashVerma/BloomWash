@@ -13,13 +13,13 @@
     <main>
         <!--? Hero Start -->
         <div class="slider-area2 section-bg2 hero-overly" style="height: 300px"
-            data-background="https://i.pinimg.com/736x/6c/b4/89/6cb489bfda8dd9208c62c8315f8d5661.jpg">
+            data-background="{{asset('frontend/assets/img/hero/hero2.png')}}">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2" style="margin-bottom: 90px">
-                                <h2 class="text-center">About us</h2>
+                                <h2>About us</h2>
                             </div>
                         </div>
                     </div>

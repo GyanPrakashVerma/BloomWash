@@ -15,8 +15,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Contact</th>
-                                <th>Subject</th>
-                                <th>Message</th>
+                                <th>Address</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -31,8 +30,7 @@
                                     <td>{{ $lists->Name }}</td>
                                     <td>{{ $lists->email }}</td>
                                     <td>{{ $lists->contact }}</td>
-                                    <td>{{ $lists->subject }}</td>
-                                    <td>{{ $lists->message }}</td>
+                                    <td>{{ $lists->address }}</td>
                                             <td>@if($lists->status==1)
           <span class="right badge badge-warning "> Active</span>
             @else <span class="right badge badge-info ">In Active</span>  @endif</td>

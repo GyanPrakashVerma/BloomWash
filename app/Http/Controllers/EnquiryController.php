@@ -14,7 +14,7 @@ class EnquiryController extends Controller
      */
     public function index()
     {
-        $list=Enquiry::where('delete_status',0)->where('subject',)->get();
+        $list=Enquiry::where('delete_status',0)->where('status',1)->get();
         return view('backend.Enquiry.index',compact('list'));
     }
 
