@@ -47,8 +47,16 @@
                             <p class="mb-20">
                                 The automated process starts as soon as your clothes go into
                                 the machine. The outcome is gleaming clothes!
+                                The automated process starts as soon as your clothes go into
+                                the machine. The outcome is gleaming clothes!
+                                The automated process starts as soon as your clothes go into
+                                the machine. The outcome is gleaming clothes!
                             </p>
                             <p class="mb-30">
+                                The automated process starts as soon as your clothes go into
+                                the machine. The outcome is gleaming clothes!
+                                The automated process starts as soon as your clothes go into
+                                the machine. The outcome is gleaming clothes!
                                 The automated process starts as soon as your clothes go into
                                 the machine. The outcome is gleaming clothes!
                             </p>

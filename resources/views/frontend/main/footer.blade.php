@@ -1,5 +1,16 @@
 <hr>
 <footer>
+    <style>
+      .footer-tittle  h4::after{
+            content: "";
+            padding:5px;
+            border-bottom: 2px solid #293464;
+            width: 80%;
+            /* margin: auto; */
+            display: flex;
+  
+        }
+    </style>
     
     <!-- Footer Start-->
     <div class="footer-area footer-padding" style="position: relative;z-index:1;">
@@ -63,7 +74,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                     <div class="single-footer-caption mb-50">
                         <div class="footer-tittle text-left">
-                            <h4>Links<h4>
+                            <h4>Links</h4>
                                     <ul>
                                         <li><a href="{{ route('home') }}">- Home</a></li>
                                         <li><a href="{{ route('about') }}">- About</a></li>
@@ -80,11 +91,11 @@
                         <div class="footer-tittle text-left">
                             <h4>Get in touch</h4>
                             <ul>
-                                <li class="number"><a href="tel:{{ $setting->contact_no }}"><i
-                                            class="bi bi-phone"></i>:+91:{{ $setting->contact_no }}</a></li>
-                                <li class="number"style="font-size: 20px"><a href="mailTo:{{ $setting->email }}"><i
-                                            class="bi bi-envelope"></i> : {{ $setting->email }}</a></li>
-                                <li style="font-size: 20px"><a><i class="bi bi-house-door-fill"></i> :
+                                <li ><a href="tel:{{ $setting->contact_no }}" style="font-size: 18px!important"><i
+                                    style="font-size: 30px!important" class="bi bi-phone"></i>:+91-{{ $setting->contact_no }}</a></li>
+                                <li ><a href="mailto:{{ $setting->email }}" style="font-size: 18px!important"><i
+                                    style="font-size: 30px!important" class="bi bi-envelope"></i> : {{ $setting->email }}</a></li>
+                                <li style="font-size: 20px"><a><i style="font-size: 30px!important" class="bi bi-house-door-fill"></i> :
                                         {{ $setting->address }}</a> </li>
                             </ul>
                         </div>
@@ -92,9 +103,9 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                     <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle text-center">
+                        <div class="footer-tittle text-left">
                             <h4>Subscribe Us</h4>
-                            <p class="text-center">Subscribe su for more attractive offers!!!!!</p>
+                            <p class="text-left">Subscribe su for more attractive offers!!!!!</p>
                             <form action="#">
                                 <div class="row">
                                     <div class="col-md-12 d-flex">
@@ -107,7 +118,7 @@
                                 </div>
                             </form>
                             <!-- social -->
-                            <div class="footer-social text-center mt-3">
+                            <div class="footer-social text-left mt-3">
                                 @if ($setting->facebook_link != '')
                                     <a href="{{ $setting->facebook_link }}"><i class="bi bi-facebook"></i></a>
                                 @endif
