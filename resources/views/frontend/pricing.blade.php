@@ -40,7 +40,7 @@
                         <th>Product Name</th>
                         <th>Standard price</th>
                         <th>Custom Price</th>
-                        <th>Image</th>
+                        <!--<th>Image</th>-->
                     </tr>
                 </thead>
                 <tbody>
@@ -49,18 +49,24 @@
                     @endphp
                     @foreach ($product as $products)
                         <tr class="text-center">
-                            <td>{{ $i++ }}</td>
+                            <td>{{ $i++ }}.</td>
                             <td>{{ $products->product }}</td>
-                            <td>{{ $products->standard_price }}</td>
-                            <td>{{ $products->custom_price }}</td>
-                            <td><img src="{{ asset('Product/' . $products->product_image) }}" height="100px" width="100px"
-                                    alt=""></td>
+                            <td><i class="fa-solid fa-indian-rupee-sign"></i>.{{ $products->standard_price }}</td>
+                            <td><i class="fa-solid fa-indian-rupee-sign"></i>.{{ $products->custom_price }}</td>
+                            <!--<td><img src="{{ asset('Product/' . $products->product_image) }}" height="100px" width="100px"-->
+                            <!--        alt=""></td>-->
                            
                            
                         </tr>
                     @endforeach
                 </tbody>
+                <div class="paginate mb-2" style="float:right;">
+                  {{$product->render()}}
+                </div>
             </table>
+            <div class="paginate " style="float:right;">
+              {{$product->render()}}
+            </div>
         </div>
     </div>
       {{-- <div class="row">

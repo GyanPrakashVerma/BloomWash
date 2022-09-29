@@ -14,7 +14,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscribeUsController;
-// use App\Http\Controllers\BannerController;
+use App\Http\Controllers\TermController;
 use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +39,7 @@ Route::get('/service',[FrontendController::class,'service'])->name('service');
 Route::get('/pricing',[FrontendController::class,'pricing'])->name('pricing');
 Route::get('/gallery',[FrontendController::class,'gallery'])->name('gallery');
 Route::get('/contact-Us',[FrontendController::class,'contact'])->name('contact');
+Route::get('/terms&condition',[FrontendController::class,'term,'])->name('term');
 Route::post('/contact',[ContactController::class,'store'])->name('contact_store');
 // Route::get('/',[FrontendController::class,'comming']);
 
@@ -57,5 +58,6 @@ Route::group(['middleware' => ['adminpage'], 'prefix' =>'/admin'],function(){
     Route::resource('subscribe',SubscribeController::class);
     Route::resource('service',ServiceController::class);
     Route::resource('setting',SettingController::class);
+    Route::resource('term',TermController::class);
 
 });

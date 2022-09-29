@@ -209,21 +209,27 @@
             </div>
 
         </section>
-        <section class="mt-3 pb-5 boxx">
+        <section class="mt-3 mb-5 pb-5 boxx">
             <div class="container">
                 <div class="box">
-                    <div class="item">
-                        <p class="counter" data-speed="1000">3</p><br>
-                        {{-- <p class="text-center">Places Serve</p> --}}
-                    </div>
-                    <div class="item">
-                        <p class="counter" data-speed="1000">150</p>
-                        {{-- <p class="text-center">Happy Customers</p> --}}
-                    </div>
-                    <div class="item">
-                        <p class="counter" data-speed="1000">2500</p>
-                        {{-- <p class="text-center">Total Product</p> --}}
-                    </div>
+                    <div class="card" style="width: 18rem;border-radius:20px;background:#f0f8ffb8" style="">
+                       <div class="card-header m-auto counter" style="font-size:25px;color:#293464;font-weight:700;padding:15px" data-speed="1000">3</div>
+                        <div class="card-body">
+                          <p class="card-text m-auto text-center" style="font-size:25px;color:#293464;font-weight:700;padding:15px">Places Serve</p>
+                        </div>
+                      </div>
+                    <div class="card" style="width: 18rem;border-radius:20px;background:#f0f8ffb8" style="">
+                       <div class="card-header m-auto counter" style="font-size:25px;color:#293464;font-weight:700;padding:15px" data-speed="1000">7845</div>
+                        <div class="card-body">
+                          <p class="card-text m-auto text-center" style="font-size:25px;color:#293464;font-weight:700;padding:15px">Happy Customers</p>
+                        </div>
+                      </div>
+                    <div class="card" style="width: 18rem;border-radius:20px;background:#f0f8ffb8" style="">
+                       <div class="card-header m-auto counter" style="font-size:25px;color:#293464;font-weight:700;padding:15px" data-speed="1000">127845</div>
+                        <div class="card-body">
+                          <p class="card-text m-auto text-center" style="font-size:25px;color:#293464;font-weight:700;padding:15px">Total Product</p>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>

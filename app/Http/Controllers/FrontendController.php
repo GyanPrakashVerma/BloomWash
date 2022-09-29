@@ -12,7 +12,14 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function comming(){
-        return view('frontend.comming');
+        
+        $feedback=Feedback::where('delete_status',0)->get();
+            $setting = Setting::where('delete_status', 0)->first();
+        $gallery = Gallery::where('delete_status', 0)->where('status',1)->get()->take(7);
+        return view('frontend.index',compact('setting','feedback','gallery'));
+        
+        //  $setting = Setting::where('delete_status', 0)->first();
+        // return view('frontend.index',compact('setting'));
     }
     public function home()
         {
@@ -34,7 +41,7 @@ class FrontendController extends Controller
     }
     public function pricing(){
         $setting = Setting::where('delete_status', 0)->first();
-        $product = Product::where('delete_status', 0)->get();
+        $product = Product::where('delete_status', 0)->orderBy('id','asc')->paginate(20);
        
         return view('frontend.pricing',compact('setting','product'));
     }
@@ -49,6 +56,12 @@ class FrontendController extends Controller
         $setting = Setting::where('delete_status', 0)->first();
        
         return view('frontend.contact',compact('setting'));
+    }
+
+    public function term(){
+        $setting = Setting::where('delete_status', 0)->first();
+       
+        return view('frontend.term',compact('setting'));
     }
   
 

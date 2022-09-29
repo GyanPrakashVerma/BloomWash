@@ -1,5 +1,6 @@
 <hr>
 <footer>
+    
     <!-- Footer Start-->
     <div class="footer-area footer-padding" style="position: relative;z-index:1;">
         <section class="sticky">
@@ -28,7 +29,7 @@
                                     <a href="{{ route('home') }}" style="color:black; font-weight: bold;">
                                         <img src="{{ asset('setting_img/' . $setting->logo) }}" height="95px"
                                             alt="">
-                                        {{-- <h1>BLOOM WASH</h1> --}}
+                                        {{-- <p>DLAI Certified Member</p> --}}
                                     </a>
                                 </div>
                             </div>
@@ -68,6 +69,7 @@
                                         <li><a href="{{ route('about') }}">- About</a></li>
                                         <li><a href="{{ route('service') }}">- Services</a></li>
                                         <li><a href="{{ route('pricing') }}">- Pricing</a></li>
+                                        <li><a href="{{ route('term') }}">- Terms & condition</a></li>
 
                                     </ul>
                         </div>
@@ -78,8 +80,8 @@
                         <div class="footer-tittle text-center">
                             <h4>Get in touch</h4>
                             <ul>
-                                <li class="number"><a href="callTo:{{ $setting->contact_no }}"><i
-                                            class="bi bi-phone"></i>: {{ $setting->contact_no }}</a></li>
+                                <li class="number"><a href="tel:{{ $setting->contact_no }}"><i
+                                            class="bi bi-phone"></i>:+91:{{ $setting->contact_no }}</a></li>
                                 <li style="font-size: 20px"><a href="mailTo:{{ $setting->email }}"><i
                                             class="bi bi-envelope"></i> : {{ $setting->email }}</a></li>
                                 <li style="font-size: 20px"><a><i class="bi bi-house-door-fill"></i> :
@@ -150,9 +152,9 @@
     <!-- Footer End-->
 </footer>
 <!-- Scroll Up -->
-<div id="back-top">
-    <a title="Go to Top" href="#"> <i class="bi bi-arrow-90deg-up"></i></a>
-</div>
+<!--<div id="back-top">-->
+<!--    <a title="Go to Top" href="#"> <i class="bi bi-arrow-90deg-up"></i></a>-->
+<!--</div>-->
 
 
 <!-- Appointment modal  -->

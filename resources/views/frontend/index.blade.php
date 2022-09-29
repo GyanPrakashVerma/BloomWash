@@ -7,6 +7,7 @@
             padding: auto;
 
         }
+
         #home {
             width: 100%;
             background: ;
@@ -14,6 +15,7 @@
             margin: 0 auto;
             padding-bottom: 33px;
         }
+
         .contact_form {
             background: #3c5b7abf;
             border-radius: 30px;
@@ -22,19 +24,20 @@
             padding: 1rem;
         }
 
-       
+
         .contact_form .form-contact input {
             /* border-radius: 30px; */
             background: transparent;
             border: none;
             border-bottom: 2px solid #f9f9fa;
         }
-        .contactForm{
+
+        .contactForm {
             background: #293464;
             color: #fff;
         }
 
-       
+
 
         .contact_form .form-contact button {
             border-radius: 30px;
@@ -132,10 +135,12 @@
         }
     </style>
     <main>
-        @if(Session::has('success'))
-        <script>
-          swal("Congrates!!!!","{{Session::get('success')}}","success",{button:"OK"});
-      </script>
+        @if (Session::has('success'))
+            <script>
+                swal("Congrates!!!!", "{{ Session::get('success') }}", "success", {
+                    button: "OK"
+                });
+            </script>
         @endif
         <!--? slider Area Start-->
         <section class="slider-area hero-overly" style="max-height:90vh;">
@@ -144,35 +149,38 @@
                 <div class="single-slider slider-height d-flex align-items-end ">
                     <div class="container-fluid px-5 banner_container" style="position: absolute; ">
                         <div class="row justify-content-center align-items-center px-3">
-                            <div class="col-xl-7 col-lg-7 col-md-7 banner_tagline m-auto" data-aos="fade-right" data-aos-duration="500">
-                                <h1  style="float:left;">We take care about
+                            <div class="col-xl-7 col-lg-7 col-md-7 banner_tagline m-auto" data-aos="fade-right"
+                                data-aos-duration="500">
+                                <h1 style="float:left;">We take care about
                                     cleanness of your clothes...</h1>
-                                 <p data-animation="fadeInLeft" data-delay="0.4s">
-                                <a href="{{route('service')}}" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s"> Services</a>
-                                 </p>
+                                <p data-animation="fadeInLeft" data-delay="0.4s">
+                                    <a href="{{ route('service') }}" class="btn hero-btn" data-animation="fadeInLeft"
+                                        data-delay="0.7s"> Services</a>
+                                </p>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 m-auto contact_form" data-aos="fade-left" data-aos-duration="500">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 m-auto contact_form" data-aos="fade-left"
+                                data-aos-duration="500">
                                 <p class="text-center text-light mb-3">Contact Us</h3>
                                     <!-- <div class="col-lg-8"> -->
-                                <form  class="form-contact" action="{{route('contact_store')}}" method="post" id=""
-                                    novalidate="novalidate">
+                                <form class="form-contact" action="{{ route('contact_store') }}" method="post"
+                                    id="" novalidate="novalidate">
                                     @csrf
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="name" id="name"
+                                                <input class="form-control valid text-white" name="name" id="name"
                                                     type="text" placeholder="Enter your name">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="email" id="email"
+                                                <input class="form-control valid text-white" name="email" id="email"
                                                     type="email" placeholder="Enter your email">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input class="form-control valid" name="phone" id="phone"
+                                                <input class="form-control valid text-white" name="phone" id="phone"
                                                     type="text" placeholder="Phone">
                                             </div>
                                         </div>
@@ -190,7 +198,8 @@
                                         </div> --}}
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" name="address" id="message" placeholder="Address">
+                                                <input type="text" class="form-control text-white" name="address"
+                                                    id="message" placeholder="Address">
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -257,8 +266,7 @@
                     <div class="col-lg-6 col-md-12">
                         <!-- about-img -->
                         <div class="about-img " data-aos="zoom-out-right">
-                            <img src="{{asset('frontend/assets/img/about.jpg')}}"
-                                alt="">
+                            <img src="{{ asset('frontend/assets/img/about.jpg') }}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
@@ -445,8 +453,8 @@
                                     cleaning agents to ensure that your valuable possession is not harmed in any way.</p>
                             </div>
                             <!-- <div class="col-xl-3 col-lg-3 col-md-5">
-                                    <a href="#" class="btn wantToWork-btn"><img src="{{ asset('frontend/assets/img/icon/call2.png') }}" alt=""> Learn More</a>
-                                </div> -->
+                                        <a href="#" class="btn wantToWork-btn"><img src="{{ asset('frontend/assets/img/icon/call2.png') }}" alt=""> Learn More</a>
+                                    </div> -->
                         </div>
                     </div>
                 </div>
@@ -507,18 +515,24 @@
         <section class="mt-3 pb-5 boxx">
             <div class="container">
                 <div class="box">
-                    <div class="item">
-                        <p class="counter" data-speed="1000">3</p><br>
-                        {{-- <p class="text-center">Places Serve</p> --}}
-                    </div>
-                    <div class="item">
-                        <p class="counter" data-speed="1000">150</p>
-                        {{-- <p class="text-center">Happy Customers</p> --}}
-                    </div>
-                    <div class="item">
-                        <p class="counter" data-speed="1000">2500</p>
-                        {{-- <p class="text-center">Total Product</p> --}}
-                    </div>
+                    <div class="card" style="width: 18rem;border-radius:20px;background:#f0f8ffb8" style="">
+                       <div class="card-header m-auto counter" style="font-size:25px;color:#293464;font-weight:700;padding:15px" data-speed="1000">3</div>
+                        <div class="card-body">
+                          <p class="card-text m-auto text-center" style="font-size:25px;color:#293464;font-weight:700;padding:15px">Places Serve</p>
+                        </div>
+                      </div>
+                    <div class="card" style="width: 18rem;border-radius:20px;background:#f0f8ffb8" style="">
+                       <div class="card-header m-auto counter" style="font-size:25px;color:#293464;font-weight:700;padding:15px" data-speed="1000">7845</div>
+                        <div class="card-body">
+                          <p class="card-text m-auto text-center" style="font-size:25px;color:#293464;font-weight:700;padding:15px">Happy Customers</p>
+                        </div>
+                      </div>
+                    <div class="card" style="width: 18rem;border-radius:20px;background:#f0f8ffb8" style="">
+                       <div class="card-header m-auto counter" style="font-size:25px;color:#293464;font-weight:700;padding:15px" data-speed="1000">127845</div>
+                        <div class="card-body">
+                          <p class="card-text m-auto text-center" style="font-size:25px;color:#293464;font-weight:700;padding:15px">Total Product</p>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>

@@ -2,6 +2,7 @@
 <html  lang="zxx">
 
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Bloom Wash</title>
@@ -23,7 +24,7 @@
     {{-- <link rel="stylesheet" href="{{asset('frontend/assets/css/nice-select.css')}}"> --}}
 
     <link rel="stylesheet" href="{{asset('frontend/assets/css/slicknav.css')}}">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/ba24b37900.js" crossorigin="anonymous"></script>
@@ -38,7 +39,7 @@
     <!-- AOS Animation css  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
 
 </head>
 <style>
@@ -70,7 +71,11 @@
         .boxx{
             height: 50vh;
             margin: auto;
-            background: url(frontend/assets/img/hero/hero2.png);
+        
+            background: url('https://images.unsplash.com/photo-1563310196-3f10e40dd789?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover
         }
         .box{
             display: flex;
@@ -108,12 +113,13 @@
 }
 </style>
 
+
 <body style="padding: 0!important;">
 
     <header>
         <!-- Header Start -->
         <div class="header-area">
-            <div class="main-header header-sticky">
+            <div class="main-header">
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
@@ -150,7 +156,7 @@
                     </div>
                 </div>
                 <div class="header-right d-none d-lg-block">
-                    <a href="callTo:{{$setting->contact_no}}" class="header-btn1"><img src="{{asset('frontend/assets/img/icon/call.png')}}" alt=""> {{$setting->contact_no}}</a>
+                    <a href="tel:{{$setting->contact_no}}" class="header-btn1"><img src="{{asset('frontend/assets/img/icon/call.png')}}" alt=""> +91-{{$setting->contact_no}}</a>
                     <a href="#" data-toggle="modal" data-target="#appointmentModalLabel" class="header-btn2">Make an
                         Appointment</a>
                 </div>
@@ -158,7 +164,90 @@
                 <div class="col-12">
                     <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
+                
+                
+                
+                 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             </div>
         </div>
         <!-- Header End -->
+        
+        
+        
+        <style>
+        
+        .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:100px;
+	right:28px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+
+
+
+.my-float{
+	margin-top:16px;
+}
+        
+        </style>
+        
+    
+        
+                <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/632301be54f06e12d894e236/1gd0btkc6';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+   
+                
     </header>

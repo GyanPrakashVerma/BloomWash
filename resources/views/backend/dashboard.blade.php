@@ -3,7 +3,7 @@
 
 @php
 //  $blog = \App\Models\Blog::where('delete_status',0)->count();   
- $service = \App\Models\Service::where('delete_status',0)->count();   
+ $product = \App\Models\Product::where('delete_status',0)->count();   
  $feedback = \App\Models\Feedback::where('delete_status',0)->count();   
  $gallery = \App\Models\Gallery::where('delete_status',0)->count();   
  $enquiry = \App\Models\Enquiry::where('delete_status',0)->count();   
@@ -23,9 +23,9 @@
             <div class="row dashboard-header">
                <div class="col-lg-3 col-md-6">
                   <div class="card dashboard-product">
-                     <span>Services</span>
-                     <h2 class="dashboard-total-products">{{$service}}</h2>
-                     <span class="label label-warning">Service</span>
+                     <span>Products</span>
+                     <h2 class="dashboard-total-products">{{$product}}</h2>
+                     <span class="label label-warning">Product</span>
                      <div class="side-box">
                         <i class="fa-solid text-warning-color fa-blog"></i>
                      </div>
