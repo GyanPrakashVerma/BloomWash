@@ -6,6 +6,7 @@ use App\Models\Feedback;
 use App\Models\Gallery;
 use App\Models\Setting;
 use App\Models\Product;
+use App\Models\Term;
 
 use Illuminate\Http\Request;
 
@@ -60,8 +61,8 @@ class FrontendController extends Controller
 
     public function term(){
         $setting = Setting::where('delete_status', 0)->first();
-       
-        return view('frontend.term',compact('setting'));
+        $term =Term:: where('delete_status',0)->first();
+        return view('frontend.term',compact('setting','term'));
     }
   
 

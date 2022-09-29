@@ -25,7 +25,7 @@
                         <div class="single-footer-caption mb-30">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <div class="logo text-center">
+                                <div class="logo text-left">
                                     <a href="{{ route('home') }}" style="color:black; font-weight: bold;">
                                         <img src="{{ asset('setting_img/' . $setting->logo) }}" height="95px"
                                             alt="">
@@ -36,7 +36,7 @@
 
 
                             <div class="footer-tittle">
-                                <div class="footer-pera text-center">
+                                <div class="footer-pera text-left">
                                     <div class="news-app-promo-subsection">
                                         <a class="news-app-promo-subsection--link news-app-promo-subsection--playstore"
                                             style="padding: 0;" href="#" target="_parent">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                     <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle text-center">
+                        <div class="footer-tittle text-left">
                             <h4>Links<h4>
                                     <ul>
                                         <li><a href="{{ route('home') }}">- Home</a></li>
@@ -77,12 +77,12 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                     <div class="single-footer-caption mb-50">
-                        <div class="footer-tittle text-center">
+                        <div class="footer-tittle text-left">
                             <h4>Get in touch</h4>
                             <ul>
                                 <li class="number"><a href="tel:{{ $setting->contact_no }}"><i
                                             class="bi bi-phone"></i>:+91:{{ $setting->contact_no }}</a></li>
-                                <li style="font-size: 20px"><a href="mailTo:{{ $setting->email }}"><i
+                                <li class="number"style="font-size: 20px"><a href="mailTo:{{ $setting->email }}"><i
                                             class="bi bi-envelope"></i> : {{ $setting->email }}</a></li>
                                 <li style="font-size: 20px"><a><i class="bi bi-house-door-fill"></i> :
                                         {{ $setting->address }}</a> </li>

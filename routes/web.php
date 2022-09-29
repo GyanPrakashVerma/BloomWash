@@ -39,7 +39,7 @@ Route::get('/service',[FrontendController::class,'service'])->name('service');
 Route::get('/pricing',[FrontendController::class,'pricing'])->name('pricing');
 Route::get('/gallery',[FrontendController::class,'gallery'])->name('gallery');
 Route::get('/contact-Us',[FrontendController::class,'contact'])->name('contact');
-Route::get('/terms&condition',[FrontendController::class,'term,'])->name('term');
+Route::get('/terms&condition',[FrontendController::class,'term'])->name('term');
 Route::post('/contact',[ContactController::class,'store'])->name('contact_store');
 // Route::get('/',[FrontendController::class,'comming']);
 
