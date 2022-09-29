@@ -13,7 +13,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Title</th>
+                                {{-- <th>Title</th> --}}
                                 {{-- <th>Description</th> --}}
                                 <th>Action</th>
                             </tr>
@@ -25,7 +25,7 @@
                             @foreach ($term as $terms)
                                 <tr>
                                     <td>{{ $i++ }}</td>
-                                    <td>{{ $terms->title }}</td>
+                                    {{-- <td>{{ $terms->title }}</td> --}}
                                     {{-- <td>{!! $terms->description !!}</td> --}}
                                    
                                    

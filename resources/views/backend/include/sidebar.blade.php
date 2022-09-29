@@ -50,8 +50,8 @@
             <li {{ Request::is('/admin/feedback') ? 'active' : '' }}><a class="waves-effect waves-dark"
                     href="{{ route('feedback.index') }}"><i class="fa-solid fa-message"></i><span>
                         Feedbacks</span></a></li>
-            <li {{ Request::is('admin/term') ? 'active' : '' }}><a class="waves-effect waves-dark"
-                    href="{{ route('term.index') }}"><i class="fa-brands fa-servicestack"></i><span>
+            <li {{ Request::is('/admin/term/1/edit') ? 'active' : '' }}><a class="waves-effect waves-dark"
+                    href="{{'/admin/term/1/edit' }}"><i class="fa-brands fa-servicestack"></i><span>
                         Terms & Condition </span></a></li>
             {{-- <li  {{Request::is('admin/ourteam')? 'active' : "";}}><a class="waves-effect waves-dark" href="{{ route('blog.list') }}"><i
                         class="fa-solid fa-blog"></i><span>

@@ -39,10 +39,10 @@ class TermController extends Controller
     public function store(Request $request)
     {
         $term =new Term;
-        $term->title=$request->title;
+        // $term->title=$request->title;
         $term->description=$request->desc;
- $term->save();
- return redirect()->route('term.index');
+        $term->save();
+        return redirect()->route('term.index');
     }
 
     /**
@@ -64,7 +64,8 @@ class TermController extends Controller
      */
     public function edit(Term $term)
     {
-        //
+        return view('backend.term.edit',compact('term'));
+
     }
 
     /**
@@ -76,7 +77,11 @@ class TermController extends Controller
      */
     public function update(Request $request, Term $term)
     {
-        //
+        $term->description=$request->desc;
+        $term->save();
+        // return redirect()->route('term.index');
+        return view('backend.term.edit',compact('term'));
+
     }
 
     /**
@@ -87,6 +92,6 @@ class TermController extends Controller
      */
     public function destroy(Term $term)
     {
-        //
+       //
     }
 }
